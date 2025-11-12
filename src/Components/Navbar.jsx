@@ -1,7 +1,16 @@
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+ const links = (
+  <>
+    <NavLink to="/" className="btn">Home</NavLink>
+    <NavLink to="/about" className="btn">About</NavLink>
+    <NavLink to="/education" className="btn">Education</NavLink>
+    <NavLink to="/services" className="btn">Services</NavLink>
+  </>
+);
     return (
-        <div className="bg-gray-100">
+        <div className="bg-gray-100 sticky z-10 top-0">
             <div className="navbar max-w-7xl m-auto">
   <div className="navbar-start">
     <div className="dropdown">
@@ -22,25 +31,14 @@ const Navbar = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
+      {links}
       </ul>
     </div>
-    <a className="btn btn-ghost font-semibold text-xl lg:text-[32px]">daisyUI</a>
+    <a className="btn font-semibold text-xl lg:text-[32px]">daisyUI</a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 font-semibold text-[16px]">
-      <li><a>Home</a></li>
-      <li><a>About</a></li>
-      <li><a>Portfolio</a></li>
-      <li><a>Services</a></li>
+    <ul className="menu menu-horizontal btn px-6 font-semibold text-[16px]">
+      {links}
     </ul>
   </div>
   <div className="navbar-end">
