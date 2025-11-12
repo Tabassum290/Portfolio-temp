@@ -5,12 +5,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css';
-import App from './App.jsx';
+import Home from './Components/Home.jsx';
 
 const router = createHashRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home/>,
   },
 ]);
 
