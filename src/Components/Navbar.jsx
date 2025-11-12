@@ -1,14 +1,4 @@
-import { NavLink } from "react-router-dom";
-
 const Navbar = () => {
- const links = (
-  <>
-    <NavLink to="/" className="btn">Home</NavLink>
-    <NavLink to="/about" className="btn">About</NavLink>
-    <NavLink to="/education" className="btn">Education</NavLink>
-    <NavLink to="/services" className="btn">Services</NavLink>
-  </>
-);
     return (
         <div className="bg-gray-100 sticky z-10 top-0">
             <div className="navbar max-w-7xl m-auto">
@@ -30,15 +20,21 @@ const Navbar = () => {
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-      {links}
+        className="menu menu-sm dropdown-content  bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+      <a href="#home" className="btn btn-ghost  text-[#9929FB]"><li>Home</li></a>
+    <a href="#about" className="btn btn-ghost  text-[#9929FB]"><li>About</li></a>
+    <a href="#education" className="btn btn-ghost  text-[#9929FB] "><li>Education</li></a>
+    <a href="#service" className="btn btn-ghost  text-[#9929FB] "><li>Services</li></a>
       </ul>
     </div>
     <a className="btn font-semibold text-xl lg:text-[32px]">daisyUI</a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal btn px-6 font-semibold text-[16px]">
-      {links}
+    <ul className="menu menu-horizontal px-6 font-semibold text-[16px]">
+      <a href="#home" className="btn text-[#9929FB]"><li>Home</li></a>
+    <a href="#about" className="btn mx-8 text-[#9929FB]"><li>About</li></a>
+    <a href="#education" className="btn text-[#9929FB] "><li>Education</li></a>
+    <a href="#service" className="btn mx-8 text-[#9929FB] "><li>Services</li></a>
     </ul>
   </div>
   <div className="navbar-end">

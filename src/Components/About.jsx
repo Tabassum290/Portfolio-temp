@@ -3,7 +3,7 @@ import { SiGmail } from "react-icons/si";
 
 const About = () => {
   return (
-    <div className="relative w-full mt-20 mb-20 px-4 lg:px-0">
+    <div id="about" className="relative w-full mt-20 mb-20 px-4 lg:px-0">
       {/* Subtle Background Accent on Right */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-purple-100 rounded-l-3xl z-0"></div>
 

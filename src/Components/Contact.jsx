@@ -50,12 +50,19 @@ const Contact = () => {
           </div>
 
           {/* Submit Button */}
-          <button
-            type="submit"
-            className="btn bg-purple-600 text-white px-6 py-3 rounded-xl hover:bg-purple-700 transition"
-          >
-            Send Message
-          </button>
+<button
+  type="button" // page reload na korte
+  className="btn bg-purple-600 text-white px-6 py-3 rounded-xl hover:bg-purple-700 transition"
+  onClick={() => {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    window.location.href = `mailto:keyatabassum2@gmail.com?subject=Message from ${name}&body=${message} (From: ${email})`;
+  }}
+>
+  Send Message
+</button>
+
         </form>
       </div>
     </div>
